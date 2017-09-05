@@ -15,8 +15,10 @@
 }
 #justify
 {
-	text-align:justify;
-	font-size: 12px;
+    text-align:justify;
+    font-size: 12px;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
 }
 
 .customButton
