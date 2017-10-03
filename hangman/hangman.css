@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+      body {
+	 font-family: 'Pontano Sans', Helvetica, Arial, sans-serif	;
+      }
+      h1 {
+	 border-bottom: 1px solid navy;
+	 color: navy;
+      }
+
+      table, th , td  {
+	 border: 1px solid #c0cfdf;
+	 border-collapse: collapse;
+	 padding: 5px;
+      }
+
+      th {
+	 background-color: #c0cfdf;
+      }
+
+      table tr:nth-child(odd) {
+	 background-color: #e0efff;
+      }
+      table tr:nth-child(even) {
+	 background-color: #fefefe;
+      }
