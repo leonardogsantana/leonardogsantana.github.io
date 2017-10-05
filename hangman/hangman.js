@@ -135,6 +135,7 @@ function StartHiddenWord()
     currentWord = listWord[currentListIndex];
     hiddenWord = '';
     for (i = 0; i < currentWord.length; i++) 
+        if(currentWord == " ")
         hiddenWord += "*";
     //alert(hiddenWord);
     return hiddenWord;
