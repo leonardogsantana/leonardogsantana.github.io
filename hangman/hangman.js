@@ -142,7 +142,9 @@ function StartHiddenWord()
     hiddenWord = '';
     for (i = 0; i < currentWord.length; i++) 
         if(currentWord == " ")
-        hiddenWord += "*";
+            hiddenWord += " ";
+        else
+            hiddenWord += "*";
     //alert(hiddenWord);
     return hiddenWord;
 }
