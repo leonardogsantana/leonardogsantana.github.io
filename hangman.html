@@ -14,12 +14,12 @@
             <table>
                 <tr>
                     <th>Países</th>
-                <tr>
-                    <td ng-repeat="pais in todosPaises">{{pais}}</td>
+                <tr ng-repeat="pais in todosPaises">
+                    <td >{{pais.nome_pais}}</td>
                 </tr>
             </table>
 
-            <p>{{paises.data}}</p>
+            <p>{{paises}}</p>
         </div>
     </body>
 </html>

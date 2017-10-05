@@ -1,4 +1,4 @@
-[ { "gentilico" : "afegãne",
+{"paises":[ { "gentilico" : "afegãne",
     "nome_pais" : "Afeganistão",
     "nome_pais_int" : "Afghanistan",
     "sigla" : "AF"
@@ -1278,4 +1278,4 @@
     "nome_pais_int" : "Zimbabwe",
     "sigla" : "ZW"
   }
-]
+]}
