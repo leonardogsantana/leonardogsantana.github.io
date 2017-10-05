@@ -18,7 +18,13 @@ App.controller('HangmanCtrl', function($scope, $http) {
         $scope.quantPaises = listWord.length;
         $scope.mensagem = "São " + $scope.registros.length + " países.";
         $scope.hidden = StartHiddenWord();
+        $scope.miss = 0;
+        $scope.victory = "";
         //UpdateHoverLetter();
+    }, function (res) {
+        alert("Erro ao executar chamada remota. "
+              + "Motivo: " + res.status + " - "
+              + res.statusText);
     });
     $scope.Update = function () 
     {
@@ -32,16 +38,32 @@ App.controller('HangmanCtrl', function($scope, $http) {
             if(aux != null)
             {    
                 var h = '';
+                var win = true;
                 for(i = 0; i < $scope.hidden.length; i++)
                     if($scope.hidden[i] != "*")
                         h += $scope.hidden[i];
                     else if(aux[i] != "*")
                         h += aux[i];
                     else
+                    {
                         h += "*";
+                        win = false;
+                    }
                 $scope.hidden = h;
+                if(win)
+                    $scope.victory = "Você ganhou!!!";
             }
-
+            else
+            {
+                if(wrongLetters.length < 5)
+                    $scope.miss = wrongLetters.length;
+                else
+                {
+                    $scope.miss = wrongLetters.length;
+                    $scope.victory = "Você perdeu!!!";
+                    EndGame();
+                }
+            }
             //alert(aux);
             //alert($scope.hidden);
 
@@ -126,7 +148,7 @@ function StartGame()
 function EndGame()
 {   
     SetDisplay("inputChar", false);    
-    SetDisplay("startButton", true);
+    //SetDisplay("startButton", true);
 }
 
 function SetDisplay(id, visible) 

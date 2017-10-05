@@ -12,9 +12,10 @@
 
             <h1>Descubra a palavra</h1>
 
+            <div><img src="hangman/{{miss}}.png"></div>
             <button id="startButton" onclick="StartGame()">Começar o jogo!</button>
             <div id="inputChar">
-                <ul >
+                <ul>
                     <li ng-repeat="letter in hidden track by $index">
                         <a class="hiddenLetter">{{letter}}</a>
                     </li>
@@ -24,6 +25,7 @@
                     <input type="text" id="inputLetter" maxlength="1"/>
                 </form>
             </div>
+            <div>{{victory}}</div>
 
 
         </div>
