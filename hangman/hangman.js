@@ -41,11 +41,17 @@ App.controller('HangmanCtrl', function($scope, $http) {
                 var h = '';
                 var win = true;
                 for(i = 0; i < $scope.hidden.length; i++)
+                    if($scope.hidden[i] != " ")
                     if($scope.hidden[i] != "*")
                         h += $scope.hidden[i];
                     else if(aux[i] != "*")
                         h += aux[i];
                     else
+                    {
+                        h += "*";
+                        win = false;
+                    }
+                else
                     {
                         h += "*";
                         win = false;
