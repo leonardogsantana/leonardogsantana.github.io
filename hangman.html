@@ -8,19 +8,24 @@
     </head>
 
     <body>
-        <div ng-app="App" ng-controller="PaisesCtrl">
+        <div ng-app="App" ng-controller="HangmanCtrl">
 
-            <h1>Lista de clientes</h1>
-            <table>
-                <tr>
-                    <th>Países</th>
-                <tr ng-repeat="pais in todosPaises">
-                    <td >{{pais.nome_pais}}</td>
-                </tr>
-            </table>
+            <h1>Descubra a palavra</h1>
 
-            <p>{{paises}}</p>
+            <button id="startButton" onclick="StartGame()">Começar o jogo!</button>
+            <div id="inputChar">
+                <ul >
+                    <li ng-repeat="letter in hidden track by $index">
+                        <a class="hiddenLetter">{{letter}}</a>
+                    </li>
+                </ul>
+                <br>Digite uma letra: 
+                <form onsubmit="Tentativa()">
+                    <input type="text" id="inputLetter" maxlength="1"/>
+                </form>
+            </div>
+
+
         </div>
     </body>
 </html>
-

@@ -1,25 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
-      body {
-	 font-family: 'Pontano Sans', Helvetica, Arial, sans-serif	;
-      }
-      h1 {
-	 border-bottom: 1px solid navy;
-	 color: navy;
-      }
+body {
+    font-family: 'Pontano Sans', Helvetica, Arial, sans-serif	;
+}
+h1 {
+    text-align: center;
+    border-bottom: 3px solid blueviolet;
+    color: blueviolet;
+}
 
-      table, th , td  {
-	 border: 1px solid #c0cfdf;
-	 border-collapse: collapse;
-	 padding: 5px;
-      }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-      th {
-	 background-color: #c0cfdf;
-      }
+li {
+    float: left;
+}
 
-      table tr:nth-child(odd) {
-	 background-color: #e0efff;
-      }
-      table tr:nth-child(even) {
-	 background-color: #fefefe;
-      }
+li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+#inputLetter 
+{
+    width: 18px;
+    text-align: center;
+}
+
+.hiddenLetter
+{
+    width: 18px;
+    height: 15px;
+    margin: 3px;
+    text-align: center;
+}
+
+.hiddenLetter:hover {
+    background-color: white;
+    color: black;
+}
+
+#startButton
+{
+    display: block;
+    float: 50%;
+}
+
+#inputChar
+{
+    display: none;
+}
