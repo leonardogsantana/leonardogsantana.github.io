@@ -41,6 +41,7 @@ App.controller('HangmanCtrl', function($scope, $http) {
                 var h = '';
                 var win = true;
                 for(i = 0; i < $scope.hidden.length; i++)
+                {
                     if($scope.hidden[i] == " ")
                     {
                         h += " ";
@@ -59,9 +60,7 @@ App.controller('HangmanCtrl', function($scope, $http) {
                 $scope.hidden = h;
                 if(win)
                     $scope.victory = "Você ganhou!!!";
-            }
-            else
-            {
+            
                 if(wrongLetters.length < 5)
                     $scope.miss = wrongLetters.length;
                 else
@@ -73,8 +72,6 @@ App.controller('HangmanCtrl', function($scope, $http) {
             }
             //alert(aux);
             //alert($scope.hidden);
-
-        }
         document.getElementById("inputLetter").value = '';
     }
 });
