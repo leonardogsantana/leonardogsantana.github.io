@@ -4,6 +4,7 @@ var currentWord = '';
 var wrongLetters = [];
 var playing = false;
 var i = 0;
+var hiddenWord = '';
 
 App.controller('HangmanCtrl', function($scope, $http) {
     $http.get('http://leonardogsantana.github.io/paises.json')
@@ -19,18 +20,35 @@ App.controller('HangmanCtrl', function($scope, $http) {
         $scope.hidden = StartHiddenWord();
         //UpdateHoverLetter();
     });
+    $scope.Update = function () 
+    {
+        var letter = document.getElementById("inputLetter").value.toString();
+        if(!/[a-z]/gm.test(letter))
+            alert("Insira um valor válido!");
+        else
+        {
+            var aux = CheckInput(document.getElementById("inputLetter").value.toString());
+            //alert($scope.hidden);
+            if(aux != null)
+            {    
+                var h = '';
+                for(i = 0; i < $scope.hidden.length; i++)
+                    if($scope.hidden[i] != "*")
+                        h += $scope.hidden[i];
+                    else if(aux[i] != "*")
+                        h += aux[i];
+                    else
+                        h += "*";
+                $scope.hidden = h;
+            }
+
+            //alert(aux);
+            //alert($scope.hidden);
+
+        }
+        document.getElementById("inputLetter").value = '';
+    }
 });
-
-function Tentativa()
-{
-    var letter = document.getElementById("inputLetter").value.toString();
-    if(IsNumber(letter))
-        alert("Insira um valor válido!");
-    else             
-        CheckInput(letter);
-
-    document.getElementById("inputLetter").value = '';
-}
 
 function IsNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
@@ -59,33 +77,40 @@ function IsNumber(n) {
 
 function CheckInput(letterX)
 {
-    alert(currentWord + currentWord.length.toString());
+    var test = '';
+    var invalido = true;
+    var currentWord2 = currentWord;
+    //alert(currentWord + currentWord.length.toString());
     for (i = 0; i < currentWord.length; i++) 
     { 
-        alert(letterX + "  -  " + currentWord.charAt(i));
-        if(letterX == currentWord.charAt(i))
+        //alert(letterX + "  -  " + currentWord.charAt(i));
+        if(letterX.toLowerCase() == currentWord2.charAt(i).toLowerCase())
         {
-            UpdateHiddenWord(letter);                  
+            test += currentWord[i];
+            invalido = false;
         }
-            
+        else
+            test+= "*";
     }
+    if(invalido)    
+        return UpdateWord(letterX);
+    else 
+        return test;
 }
 
-function UpdatecurrentWord(letter)
+function UpdateWord(letter)
 {
-    wrongLetters.push(letter);
-    for (i = 0; i < currentWord.length; i++) 
-        if(hiddenWord.charAt(i) == "*")
-            if(currentWord.charAt(i) == letter)
-                hiddenWord[i] = letter;
-    alert(wrongLetters.toString());
+    if(letter != " " || letter != "")
+        wrongLetters.push(letter);
+    alert("Palpites errados: " + wrongLetters.toString());
+    return null;
 }
 
 function StartHiddenWord()
 {
     var currentListIndex = Math.floor(Math.random() * listWord.length);
     currentWord = listWord[currentListIndex];
-    var hiddenWord = '';
+    hiddenWord = '';
     for (i = 0; i < currentWord.length; i++) 
         hiddenWord += "*";
     //alert(hiddenWord);
