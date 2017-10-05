@@ -39,7 +39,7 @@ function StartHiddenWord()
 var App = angular.module('App', []);
 
 App.controller('PaisesCtrl', function($scope, $http) {
-  $http.get('file://hangman/paises.json')
+  $http.get('https://leonardogsantana.github.io/paises.json')
        .then(function(res){
           $scope.todosPaises = res.data;                
         });
