@@ -3,15 +3,24 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="hangman/hangman.css">
-        <script src="hangman/hangman.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+        <script src="hangman/hangman.js"></script>
     </head>
 
     <body>
-        <div ng-app="myApp" ng-controller="wordCtrl">
-            <button type="button" onclick="StartHiddenWord()">Start Game</button>
+        <div ng-app="App" ng-controller="PaisesCtrl">
 
-            <div id="hidden">{{x.word}}</div>
+            <h1>Lista de clientes</h1>
+            <table>
+                <tr>
+                    <th>Países</th>
+                <tr>
+                    <td ng-repeat="pais in todosPaises">{{pais}}</td>
+                </tr>
+            </table>
+
+            <p>{{paises.data}}</p>
         </div>
     </body>
 </html>
+
