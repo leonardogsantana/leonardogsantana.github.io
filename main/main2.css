@@ -1,82 +1,64 @@
 body 
 {
-    background-color: rgb(99, 99, 99);
-    width: 100%;
+    width: 100vw;
     height: auto;
     font:12px Arial, Verdana, Helvetica, sans-serif;
     text-align:center;
 }
 
-body h1 
-{	
-    color:#fff;
-}
-body h2 
-{	
-    color:black; 
-}
-
 body header 
 {
     position:relative;
-    height:5vh;
+    height:100%;
     background:#ffffff;
     color: black;
+    text-align: center;
 }
 
 footer 
 {
+    position: relative;
     background:#ffffff; 
+    width: 100vw;
     height:5vh;
     color:black;
-    text-align:right; 
+    text-align: end;
+    text-align:center; 
     font-size:80%; 
     padding-right:1vw;
 }	
 
 .projects 
 {
-    width: 100vw; 
     margin:0 auto;
     text-align:left; 
     border:none; 
+    float: 0.5;
 }
 ul.project 
 {
     margin:0 auto;
     position:relative;
     list-style:none;
-    width:auto;
     padding: 0;
     background:#999;
+    width: 100vw;
+    height: 100vh;
 }
 
 ul.project li 
 {
     border:none; 
-    width: 100vw;;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
-ul.project li iframe
-{
-    border:none; 
-    width: 50vw;
-    height: 50vh;
-    float:left; 
-}
-
-ul.project li img
-{ 
-    width: 25vw;
-    height: 25vh;
-    opacity:0.35;
-}
-ul.project li img:hover
-{
-    width: 50vw;
-    height: 50vh;
-    -webkit-transition: width 1s;
-    transition: width 1s;
-    opacity:1;
+li.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
