@@ -52,7 +52,7 @@ ul.fotos
     list-style:none;  
     width:auto;
     padding:1px;
-    background:#999;
+    <!--background:#999;-->
     margin:3px; 
     padding:0; 
 }
@@ -86,10 +86,15 @@ ul.fotos li img
     width:350px;
     height:225px;
 }
+{
+    border:none; 
+    width:350px;
+    height:225px;
+}
 
 #info
 {
-    align-content:center;
+    align:center;
     text-align:center;
     color:#fff;
 }
