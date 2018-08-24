@@ -1,68 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
-
-  <!-- CSS -->
-  <!-- Add Material font (Roboto) and Material icon as needed -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- Add Material CSS, replace Bootstrap CSS -->
-  <link href="node_modules/daemonite-material/css/material.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="author" content="Leonardo Santana">
+    <title>Portfolio of Leonardo Santana - Site under construction!</title>
+    <link rel="stylesheet" href="main/main2.css">
+    <link rel="icon" href="main/favicon.ico" type="image/x-icon" />
+    <script src="main/main.js"></script>
 </head>
 
 <body>
-  <div class="card m-5">
-    <div class="card-header">
-      <h2>Leonardo's Portfolio</h2>
-    </div>
-    <div class="card-body bg-light">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#game_01" data-slide-to="0" class="active"></li>
-          <li data-target="#game_02" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-            <h3>Party Hats</h3>
-          <div class="carousel-item active p-5">
-            <div class="embed-responsive embed-responsive-16by9 p-5">
-              <iframe class="embed-responsive-item p-5" src="./videos/PartyHats.mp4" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="carousel-item">
-              <div class="carousel-item active p-5">
-                  <div class="embed-responsive embed-responsive-16by9 p-5">
-                    <iframe class="embed-responsive-item p-5" src="./videos/BochaSimulator.mp4" allowfullscreen></iframe>
-                  </div>
-                </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-  </div>
+    <div class="projects">
+        <ul class="project">
+            <li>
+                <header>
+                    <h2>Portfolio of</h2>
+                    <h1><b>Leonardo Santana</b></h1>
+                </header>
+            </li>
+            <li>
+                <video autoplay muted loop class="video">
+                    <source src="videos/PartyHats.mp4" type="video/mp4" onclick="PlayOrPauseVideo()"> Your browser does not
+                    support HTML5 video.
+                    <!--<iframe src="https://www.youtube.com/embed/B4mgxc2haZI">
+                </iframe>-->
+                </video>
+            </li>
+            <li>
+                <video autoplay muted loop class="video">
+                    <source src="videos/BochaSimulator.mp4" type="video/mp4" onclick="PlayOrPauseVideo()"> Your browser does
+                    not support HTML5 video.
+                    <!--<iframe src="https://www.youtube.com/embed/B4mgxc2haZI">
+                    </iframe>-->
+                </video>
+            </li>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-  <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
-  <script src="node_modules/daemonite-material/js/material.min.js"></script>
-  <script src="index.js"></script>
+            <li>
+                <video autoplay muted loop class="video">
+                    <source src="videos/PartyHats.mp4" type="video/mp4" onclick="PlayOrPauseVideo()"> Your browser does not
+                    support HTML5 video.
+                    <!--<iframe src="https://www.youtube.com/embed/B4mgxc2haZI">
+                    </iframe>-->
+                </video>
+            </li>
+            <li>
+                <video autoplay muted loop class="video">
+                    <source src="videos/BochaSimulator.mp4" type="video/mp4" onclick="PlayOrPauseVideo()"> Your browser does
+                    not support HTML5 video.
+                    <!--<iframe src="https://www.youtube.com/embed/B4mgxc2haZI">
+                    </iframe>-->
+                </video>
+            </li>
+            <li>
+                <video autoplay muted loop class="video">
+                    <source src="videos/PartyHats.mp4" type="video/mp4" onclick="PlayOrPauseVideo()"> Your browser does not
+                    support HTML5 video.
+                    <!--<iframe src="https://www.youtube.com/embed/B4mgxc2haZI">
+                    </iframe>-->
+                </video>
+            </li>
+            <footer>
+                <p>Leonardo Santana
+                    <br> © 2018</p>
+            </footer>
+        </ul>
+    </div>
+    <div class="buttons">
+    </div>
 </body>
 
 </html>
