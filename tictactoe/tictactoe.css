@@ -29,13 +29,13 @@
     text-align: center;
     vertical-align: middle;  
     background-color: #fff;
-    border-color: rgb(0, 0, 0);    
+    border-color:#666;   
     color:rgb(0, 0, 0);  
 }
 .customButton:hover
 {
     background-color:rgb(0, 0, 0); 
-    border-color: #fff;
+    border-color: #6ac502;
     color:  #fff;
 }
 
@@ -60,7 +60,7 @@
 
 body 
 {
-    background:rgb(255, 255, 255);
+    background: url(../main/test.jpg) fixed;
     font:12px Arial, Verdana, Helvetica, sans-serif;
     text-align:center;
     padding:0;
