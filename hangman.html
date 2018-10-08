@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hangman/hangman.css">
+    <link rel="stylesheet" href="games.css">
+    <title>Portfolio of Leonardo Santana - Hangman</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="hangman/hangman.js"></script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <h3>Portfolio of </h3>
+            <h1><b>Leonardo Santana</b></h1>
+        </header>
+        <div ng-app="App" ng-controller="HangmanCtrl">
+
+            <br><h1>Hangman</h1>
+
+            <div><img src="hangman/{{miss}}.png"></div>
+            <button id="startButton" onclick="StartGame()">Começar o jogo!</button>
+            <div id="inputChar">
+                <ul>
+                    <li ng-repeat="letter in hidden track by $index">
+                        <a class="hiddenLetter">{{letter}}</a>
+                    </li>
+                </ul>
+                <br>Digite uma letra:
+                <form ng-submit="Update()">
+                    <input type="text" id="inputLetter" maxlength="1" />
+                </form>
+            </div>
+            <div>{{victory}}</div>
+        </div>
+        <form action="index.html">
+            <button class="customButton" type="submit" name="botao-return">Return To Main</button>
+        </form>
+
+    </div>
+    <footer>
+        <p>Leonardo Santana<br>
+            © 2018</a></p>
+    </footer>
+</body>
+
+</html>
