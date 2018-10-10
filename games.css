@@ -184,18 +184,12 @@ body
             a:link {
                 color: rgb(0, 123, 0);
             }
-            
-            /* visited link */
             a:visited {
                 color: rgb(0, 123, 0);
             }
-            
-            /* mouse over link */
             a:hover {
                 color: #6ac502;
             }
-            
-            /* selected link */
             a:active {
                 color: rgb(0, 123, 0);
             }
